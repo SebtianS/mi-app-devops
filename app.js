@@ -2,7 +2,7 @@ const http = require('http');
 
 const server = http.createServer((req, res) => {
   res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('Nueva version desplegada 2.0');
+  res.end('Nueva version desplegada 3.0');
 });
 
 server.listen(3000, () => {
