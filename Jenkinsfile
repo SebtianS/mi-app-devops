@@ -8,6 +8,12 @@ pipeline {
             }
         }
 
+        stage('Approval Required') {
+            steps {
+                input message: '¿Aprobar despliegue a producción?', ok: 'Aprobar'
+            }
+        }
+
         stage('Stop Old Container') {
             steps {
                 sh 'docker rm -f mi-app-container || true'
